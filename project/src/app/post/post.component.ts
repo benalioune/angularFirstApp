@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostComponent implements OnInit {
 
-  enteredValue = ''
-  newPost = ''
+  enteredTitle = ''
+  enteredContent = ''
 
   constructor() { }
 
@@ -16,7 +16,10 @@ export class PostComponent implements OnInit {
   }
 
   addPost(){
-    this.newPost = this.enteredValue
+    const post = {
+      title: this.enteredTitle,
+      content: this.enteredContent
+          }
   }
 
 }
